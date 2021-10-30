@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.bg_user_template {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(201, 166, 144, 0)), to(#2b59c35e)), url("../images/background/user-template-bg.png");
+  background-image: linear-gradient(to bottom, rgba(201, 166, 144, 0), #2b59c35e), url("../images/background/user-template-bg.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg_user_template .user_template_content {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffeecf;
+  text-align: center;
+}
+
+.bg_user_template .user_template_content .wel {
+  font-size: 2.5rem;
+}
+
+.login_form {
+  padding: 15px 20px;
+  background-color: white;
+  height: 267px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.login_form .account_question {
+  color: #5f6368;
+}
+
+.signup_form {
+  padding: 15px 20px;
+  background-color: white;
+  height: 350px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.signup_form .account_question {
+  color: #5f6368;
+}
+/*# sourceMappingURL=main.css.map */

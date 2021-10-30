@@ -1,0 +1,14 @@
+.bg_user_template{
+    background-image: linear-gradient(to bottom, rgba(201, 166, 144, 0), #2b59c35e), url('../images/background/user-template-bg.png');
+    background-position: center;
+    background-size: cover;
+    .user_template_content{
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $cl-four;
+        text-align: center;
+        .wel{
+            font-size: 2.5rem;
+        }
+    }
+}

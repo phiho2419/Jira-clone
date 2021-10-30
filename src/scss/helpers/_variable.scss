@@ -1,0 +1,17 @@
+// variable color
+$cl-one: #2b59c3;
+$cl-two: #253c78;
+$cl-three: #d36582;
+$cl-four: #ffeecf;
+$cl-five: #c9a690;
+$cl-w-gray: #5f6368;
+$cl-bg-gray: #70757a;
+
+//break points
+$breakpoints: (
+    "2xl": 1536px,
+    "xl": 1280px,
+    "lg": 1024px,
+    "md": 768px,
+    "sm": 640px,
+);
