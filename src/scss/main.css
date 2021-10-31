@@ -40,24 +40,24 @@ li {
 .login_form {
   padding: 15px 20px;
   background-color: white;
-  height: 267px;
+  height: auto;
   width: 400px;
   border-radius: 10px;
 }
 
 .login_form .account_question {
-  color: #5f6368;
+  color: #2b59c3;
 }
 
 .signup_form {
   padding: 15px 20px;
   background-color: white;
-  height: 350px;
+  height: auto;
   width: 400px;
   border-radius: 10px;
 }
 
 .signup_form .account_question {
-  color: #5f6368;
+  color: #2b59c3;
 }
 /*# sourceMappingURL=main.css.map */
