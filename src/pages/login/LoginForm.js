@@ -2,22 +2,27 @@ import React from 'react'
 import { useFormik } from 'formik';
 import { TextField, Button } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
+
 import * as Yup from 'yup';
 
 const validation = Yup.object({
     email: Yup.string().email('Invalid email').required('Required'),
-    password: Yup.string().required('Required')
+    passWord: Yup.string().required('Required')
 })
 
-export default function LoginForm() {
+export default function LoginForm(props) {
+    const dispatch = useDispatch();
+
     const formik = useFormik({
         initialValues: {
             email: '',
-            password: '',
+            passWord: '',
         },
-        validationSchema : validation,
+        validationSchema: validation,
         onSubmit: values => {
-            console.log(JSON.stringify(values))
+            const action = { type: "CALL_API_SIGN_IN", data: values ,historyProps: props.history};
+            dispatch(action)
         },
     });
     return (
@@ -33,20 +38,20 @@ export default function LoginForm() {
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         error={formik.touched.email && Boolean(formik.errors.email)}
-                        helperText={formik.touched.email && formik.errors.email }
+                        helperText={formik.touched.email && formik.errors.email}
                     />
                 </div>
                 <div>
                     <TextField
-                        label="Your password"
-                        name="password"
+                        label="Password"
+                        name="passWord"
                         type="password"
                         margin="dense"
                         fullWidth
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
-                        error={formik.touched.password && Boolean(formik.errors.password)}
-                        helperText={formik.touched.password && formik.errors.password }
+                        error={formik.touched.passWord && Boolean(formik.errors.passWord)}
+                        helperText={formik.touched.passWord && formik.errors.passWord}
                     />
                 </div>
                 <div className="text-center my-2 font-bold">
@@ -61,6 +66,7 @@ export default function LoginForm() {
                         </Button>
                     </NavLink>
                 </div>
+
             </form>
         </div>
     )
