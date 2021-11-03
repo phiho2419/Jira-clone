@@ -1,8 +1,8 @@
 const stateDefault = {
-    
+    data: 'data'
 }
 
-export const userReducer = (state = stateDefault, action) => {
+export const UserReducer = (state = stateDefault, action) => {
     switch (action.type) {
         case 'SIGN_IN':{
             break;

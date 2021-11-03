@@ -1,0 +1,10 @@
+.bg_loading {
+    background-image: url("../images/loadingGif/loadingHome.gif");
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-position: center;
+    z-index: 99;
+}

@@ -19,6 +19,17 @@ li {
   list-style: none;
 }
 
+.bg_loading {
+  background-image: url("../images/loadingGif/loadingHome.gif");
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-position: center;
+  z-index: 99;
+}
+
 .bg_user_template {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(201, 166, 144, 0)), to(#2b59c35e)), url("../images/background/user-template-bg.png");
   background-image: linear-gradient(to bottom, rgba(201, 166, 144, 0), #2b59c35e), url("../images/background/user-template-bg.png");
