@@ -1,0 +1,33 @@
+.HomeDashboardToprow{
+    height: 50px;
+    width: 100%;
+    background-color:$cl-one;
+    position: relative;
+    line-height: 50px;
+    .toggle_dashboard {
+        .toggle_on,
+        .toggle_off {
+            position: absolute;
+            cursor: pointer;
+        }
+        .toggle_hidden{
+            display: none;
+        }
+    }
+    // .dashboard_header{
+    //     te
+    // }
+    
+}
+.HomeDashboardToprow::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    border-radius: 50%;
+    z-index: 99;
+    box-shadow: -15px -15px 0 $cl-one;
+}

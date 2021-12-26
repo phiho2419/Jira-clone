@@ -4,7 +4,7 @@ import * as userAction from '../actions/UserActions'
 
 export function* rootSaga() {
     yield all([
-        userAction.trackingCallApiSignIn(),
+        userAction.trackingCallApiLogin(),
         userAction.trackingCallApiSignUp(),
     ])
 }

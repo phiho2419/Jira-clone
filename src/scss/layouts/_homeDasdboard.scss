@@ -1,0 +1,85 @@
+.dashboard {
+    background-color: #232c33;
+    border-right: 15px solid $cl-one;
+    border-left: 15px solid #232c33;
+    overflow-x: hidden;
+    .dashboard_logo {
+        color: $cl-four;
+        height: 100px !important;
+        .title_logo {
+            margin-top: 12px;
+            font-weight: 700;
+        }
+        .ver_logo {
+            font-size: 12px;
+        }
+    }
+    .dashboard_list {
+        margin-top: 40px;
+        .dashboard_item {
+            margin: 5px 0;
+            padding: 10px 15px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            position: relative;
+            cursor: pointer;
+            .name_item {
+                padding-left: 18px;
+                font-weight: 400;
+            }
+        }
+        .dashboard_item:hover {
+            background-color: $cl-one;
+            position: relative;
+            ::before,
+            ::after {
+                content: "";
+                position: absolute;
+                background-color: transparent;
+                width: 30px;
+                height: 30px;
+                right: 0;
+                border-radius: 50%;
+                pointer-events: none;
+            }
+            ::before {
+                top: -30px;
+                box-shadow: 15px 15px 0 $cl-one;
+            }
+            ::after {
+                bottom: -30px;
+                box-shadow: 15px -15px 0 $cl-one;
+            }
+        }
+        .dashboard_item.active {
+            background-color: $cl-one;
+            position: relative;
+            ::before,
+            ::after {
+                content: "";
+                position: absolute;
+                background-color: transparent;
+                width: 30px;
+                height: 30px;
+                right: 0;
+                border-radius: 50%;
+                pointer-events: none;
+            }
+            ::before {
+                box-shadow: 15px 15px 0 $cl-one;
+                top: -30px;
+            }
+            ::after {
+                bottom: -30px;
+                box-shadow: 15px -15px 0 $cl-one;
+            }
+        }
+    }
+    
+    width: 87px;
+    transition: width 0.5s;
+    white-space: nowrap;
+}
+.dashboard.active {
+    width: 288px;
+}

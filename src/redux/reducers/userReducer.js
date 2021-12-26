@@ -4,7 +4,7 @@ const stateDefault = {
 
 export const UserReducer = (state = stateDefault, action) => {
     switch (action.type) {
-        case 'SIGN_IN':{
+        case 'LOG_IN':{
             break;
         }
         case 'SIGN_UP':{

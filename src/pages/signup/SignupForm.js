@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import { TextField, Button } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import * as Yup from 'yup';
+import { CALL_API_SIGN_UP_ACTION } from '../../redux/constants/consRedux';
 
 const validation = Yup.object({
     firstName: Yup.string()
@@ -30,7 +31,7 @@ export default function SignupForm(props) {
         onSubmit: values => {
             const { firstName, lastName, email, passWord } = values;
             const newUser = { name: firstName + ' ' + lastName, email, passWord, phoneNumber: '1111' }
-            const action = { type: "CALL_API_SIGN_UP", newUser , historyProps : props.history }
+            const action = { type: CALL_API_SIGN_UP_ACTION, newUser , historyProps : props.history }
             // Đưa action lên middleWare call api
             dispatch(action)
         },
@@ -87,9 +88,9 @@ export default function SignupForm(props) {
                 <hr />
                 <div className="text-center  mt-2 font-bold">
                     <p className="text-xs pb-1 account_question"> Already have an account ? </p>
-                    <NavLink to="/signin">
+                    <NavLink to="/login">
                         <Button className="justify-center" variant="outlined" color="info">
-                            Sign in
+                            Login
                         </Button>
                     </NavLink>
                 </div>

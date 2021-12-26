@@ -48,6 +48,143 @@ li {
   font-size: 2.5rem;
 }
 
+.dashboard {
+  background-color: #232c33;
+  border-right: 15px solid #2b59c3;
+  border-left: 15px solid #232c33;
+  overflow-x: hidden;
+  width: 87px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  white-space: nowrap;
+}
+
+.dashboard .dashboard_logo {
+  color: #ffeecf;
+  height: 100px !important;
+}
+
+.dashboard .dashboard_logo .title_logo {
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.dashboard .dashboard_logo .ver_logo {
+  font-size: 12px;
+}
+
+.dashboard .dashboard_list {
+  margin-top: 40px;
+}
+
+.dashboard .dashboard_list .dashboard_item {
+  margin: 5px 0;
+  padding: 10px 15px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dashboard .dashboard_list .dashboard_item .name_item {
+  padding-left: 18px;
+  font-weight: 400;
+}
+
+.dashboard .dashboard_list .dashboard_item:hover {
+  background-color: #2b59c3;
+  position: relative;
+}
+
+.dashboard .dashboard_list .dashboard_item:hover ::before,
+.dashboard .dashboard_list .dashboard_item:hover ::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.dashboard .dashboard_list .dashboard_item:hover ::before {
+  top: -30px;
+  -webkit-box-shadow: 15px 15px 0 #2b59c3;
+          box-shadow: 15px 15px 0 #2b59c3;
+}
+
+.dashboard .dashboard_list .dashboard_item:hover ::after {
+  bottom: -30px;
+  -webkit-box-shadow: 15px -15px 0 #2b59c3;
+          box-shadow: 15px -15px 0 #2b59c3;
+}
+
+.dashboard .dashboard_list .dashboard_item.active {
+  background-color: #2b59c3;
+  position: relative;
+}
+
+.dashboard .dashboard_list .dashboard_item.active ::before,
+.dashboard .dashboard_list .dashboard_item.active ::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.dashboard .dashboard_list .dashboard_item.active ::before {
+  -webkit-box-shadow: 15px 15px 0 #2b59c3;
+          box-shadow: 15px 15px 0 #2b59c3;
+  top: -30px;
+}
+
+.dashboard .dashboard_list .dashboard_item.active ::after {
+  bottom: -30px;
+  -webkit-box-shadow: 15px -15px 0 #2b59c3;
+          box-shadow: 15px -15px 0 #2b59c3;
+}
+
+.dashboard.active {
+  width: 288px;
+}
+
+.HomeDashboardToprow {
+  height: 50px;
+  width: 100%;
+  background-color: #2b59c3;
+  position: relative;
+  line-height: 50px;
+}
+
+.HomeDashboardToprow .toggle_dashboard .toggle_on,
+.HomeDashboardToprow .toggle_dashboard .toggle_off {
+  position: absolute;
+  cursor: pointer;
+}
+
+.HomeDashboardToprow .toggle_dashboard .toggle_hidden {
+  display: none;
+}
+
+.HomeDashboardToprow::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  border-radius: 50%;
+  z-index: 99;
+  -webkit-box-shadow: -15px -15px 0 #2b59c3;
+          box-shadow: -15px -15px 0 #2b59c3;
+}
+
 .login_form {
   padding: 15px 20px;
   background-color: white;

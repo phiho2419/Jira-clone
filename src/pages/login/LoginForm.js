@@ -5,13 +5,14 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
 
 import * as Yup from 'yup';
+import {  CALL_API_LOG_IN_ACTION } from '../../redux/constants/consRedux';
 
 const validation = Yup.object({
     email: Yup.string().email('Invalid email').required('Required'),
     passWord: Yup.string().required('Required')
 })
 
-export default function LoginForm(props) {
+export default function LoginForm() {
     const dispatch = useDispatch();
 
     const formik = useFormik({
@@ -21,7 +22,7 @@ export default function LoginForm(props) {
         },
         validationSchema: validation,
         onSubmit: values => {
-            const action = { type: "CALL_API_SIGN_IN", data: values ,historyProps: props.history};
+            const action = { type: CALL_API_LOG_IN_ACTION, data: values };
             dispatch(action)
         },
     });
@@ -55,7 +56,7 @@ export default function LoginForm(props) {
                     />
                 </div>
                 <div className="text-center my-2 font-bold">
-                    <Button type="submit" className="px-3" variant="contained" color="primary" size="large">Sign in</Button>
+                    <Button type="submit" className="px-3" variant="contained" color="primary" size="large">Log in</Button>
                 </div>
                 <hr />
                 <div className="text-center  mt-2 font-bold">
